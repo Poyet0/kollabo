@@ -72,6 +72,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="fr" className={`${GeistSans.variable} ${GeistMono.variable}`} suppressHydrationWarning>
       <head>
         <link rel="preconnect" href="https://api.fontshare.com" crossOrigin="anonymous" />
+        <link
+          rel="stylesheet"
+          href="https://api.fontshare.com/v2/css?f[]=clash-display@400,500,600,700&display=swap"
+          crossOrigin="anonymous"
+        />
       </head>
       <body className="min-h-screen bg-black antialiased">
         {children}

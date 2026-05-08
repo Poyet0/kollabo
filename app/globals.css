@@ -1,12 +1,10 @@
 /* ============================================================
    KOLLABO — Design System
    Tailwind CSS v4 + Variables CSS KOLLABO
+   Clash Display est chargé via <link> dans layout.tsx (App Router)
    ============================================================ */
 
 @import "tailwindcss";
-
-/* Clash Display depuis Fontshare CDN (auto-hébergé en production) */
-@import url('https://api.fontshare.com/v2/css?f[]=clash-display@400,500,600,700&display=swap');
 
 /* ---- Thème Tailwind v4 ---- */
 @theme {
