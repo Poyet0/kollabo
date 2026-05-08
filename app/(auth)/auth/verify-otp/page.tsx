@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import { Suspense } from 'react'
 import { OtpVerifyForm } from './_components/otp-verify-form'
 
 export const metadata: Metadata = {
@@ -22,7 +23,9 @@ export default function VerifyOtpPage() {
         </p>
       </div>
 
-      <OtpVerifyForm />
+      <Suspense fallback={<div className="h-12" />}>
+        <OtpVerifyForm />
+      </Suspense>
     </div>
   )
 }

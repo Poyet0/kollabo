@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import { Suspense } from 'react'
 import { createClient } from '@/lib/supabase/server'
 import { CreatorCard } from './_components/creator-card'
 import { DiscoverFilters } from './_components/discover-filters'
@@ -69,7 +70,9 @@ export default async function DiscoverPage({
       <div className="flex gap-6">
         {/* Filtres sidebar */}
         <aside className="hidden lg:block w-60 shrink-0">
-          <DiscoverFilters currentFilters={params} />
+          <Suspense fallback={<div className="h-40" />}>
+            <DiscoverFilters currentFilters={params} />
+          </Suspense>
         </aside>
 
         {/* Grille créateurs */}
